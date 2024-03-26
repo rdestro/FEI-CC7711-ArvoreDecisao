@@ -1,4 +1,4 @@
-#pip install scikit-learn==1.0.2
+#pip install scikit-learn
 #pip install matplotlib
 
 from sklearn.datasets import load_iris
@@ -28,5 +28,5 @@ print(data.target_names[class_Amostra])
 
 
 fig, ax = plt.subplots(figsize=(25, 10))
-metrics.plot_confusion_matrix(Arvore,features,target,display_labels=data.target_names, values_format='d', ax=ax)
+metrics.ConfusionMatrixDisplay.from_estimator(Arvore,features,target,display_labels=data.target_names, values_format='d', ax=ax)
 plt.show()
