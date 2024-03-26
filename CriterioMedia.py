@@ -29,5 +29,5 @@ tree.plot_tree(Arvore,feature_names=['Notas','PercFalta'],class_names=['Aprovado
 plt.show()
 
 fig, ax = plt.subplots(figsize=(25, 10))
-metrics.plot_confusion_matrix(Arvore,features,target,display_labels=['Aprovado', 'Reprovado'], values_format='d', ax=ax)
+metrics.ConfusionMatrixDisplay.from_estimator(Arvore,features,target,display_labels=['Aprovado', 'Reprovado'], values_format='d', ax=ax)
 plt.show()
